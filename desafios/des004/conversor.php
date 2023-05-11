@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio php 04</title>
+</head>
+<body>
+    <main>
+        <h1>Conversor de Moedas v2.0</h1>
+        <?php 
+            
+            $cotacao = file_get_contents("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='05-11-2023'&$top=100&$skip=0&$format=text/html&$select=cotacaoCompra");
+            
+            echo $cotacao;
+        ?>
+    </main>
+</body>
+</html>
