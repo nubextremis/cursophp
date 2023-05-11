@@ -19,7 +19,7 @@
             echo "<p>Analisando o número <strong>$form</strong> informado pelo usuário:</p>";
             echo "<ul>
                 <li>A parte inteira do número é <strong>$inteiro</strong>.</li>
-                <li>A parte fracionária do número é $formRest.</li>
+                <li>A parte fracionária do número é <strong>$formRest</strong></li>
             </ul>";
         ?>
         <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
