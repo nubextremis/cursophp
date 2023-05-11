@@ -14,7 +14,7 @@
             $converter = $_REQUEST["reais"] ?? 0;
             $cotacao = 4.94;
             $cotvirg = number_format($converter, 2, ',', '.');
-            $convertido = $converter * (1/$cotacao);
+            $convertido = $converter / $cotacao;
             $total = number_format($convertido, 2, ',', '.');
             echo "<p>Seus R$ $cotvirg equivalem a <strong>US$ $total</strong></p>";
         ?>
