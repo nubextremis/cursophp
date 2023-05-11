@@ -11,7 +11,7 @@
     <main>
         <h1>Resultado Final</h1>
         <?php
-            $numeroprin = $_GET["numero"] ?? 0;
+            $numeroprin = $_REQUEST["numero"] ?? 0;
             $numseguinte = $numeroprin + 1;
             $numanterior = $numeroprin - 1;
             echo "<p>Você digitou o número <strong>$numeroprin</strong>!</p>";

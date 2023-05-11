@@ -11,7 +11,7 @@
     <main>
         <h1>Conversor de Moedas v1.0</h1>
         <?php
-            $converter = $_GET["reais"] ?? 0;
+            $converter = $_REQUEST["reais"] ?? 0;
             $cotacao = 4.94;
             $cotvirg = number_format($converter, 2, ',', '.');
             $convertido = $converter * (1/$cotacao);

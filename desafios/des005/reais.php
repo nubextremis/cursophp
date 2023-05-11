@@ -11,7 +11,7 @@
     <main>
         <h1>Analisador de Número Real</h1>
         <?php 
-            $numero = $_GET["numero"];
+            $numero = $_REQUEST["numero"];
             $form = number_format($numero, 3, ",", ".");
             $inteiro = intval($numero);
             $resto = $numero - $inteiro;
