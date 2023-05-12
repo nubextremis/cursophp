@@ -13,10 +13,9 @@
         <?php
             $converter = $_REQUEST["reais"] ?? 0;
             $cotacao = 4.94;
-            $cotvirg = number_format($converter, 2, ',', '.');
             $convertido = $converter / $cotacao;
-            $total = number_format($convertido, 2, ',', '.');
-            echo "<p>Seus R$ $cotvirg equivalem a <strong>US$ $total</strong></p>";
+            $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+            echo "Seus " . numfmt_format_currency($padrao, $converter, "BRL") . " equivalem a " . numfmt_format_currency($padrao, $convertido, "USD");
         ?>
         <p>*<strong>Cotação fixa de R$ 4,94</strong> informada diretamente no código.</p>
         <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
