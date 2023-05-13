@@ -12,14 +12,13 @@
         <h1>Analisador de Número Real</h1>
         <?php 
             $numero = $_REQUEST["numero"];
-            $form = number_format($numero, 3, ",", ".");
-            $inteiro = intval($numero);
+            // $inteiro = intval($numero);
+            $inteiro = (int) $numero;
             $resto = $numero - $inteiro;
-            $formRest = number_format($resto, 3, ",", ".");
-            echo "<p>Analisando o número <strong>$form</strong> informado pelo usuário:</p>";
+            echo "<p>Analisando o número <strong>" . number_format($numero, 3, ",", ".") . "</strong> informado pelo usuário:</p>";
             echo "<ul>
-                <li>A parte inteira do número é <strong>$inteiro</strong>.</li>
-                <li>A parte fracionária do número é <strong>$formRest</strong></li>
+                <li>A parte inteira do número é <strong>" . number_format($inteiro, 0, ",", "."). "</strong>.</li>
+                <li>A parte fracionária do número é <strong>" . number_format($resto, 3, ",", ".") . "</strong></li>
             </ul>";
         ?>
         <input type="button" value="Voltar" onclick="javascript:history.go(-1)">
