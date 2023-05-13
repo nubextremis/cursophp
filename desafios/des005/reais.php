@@ -12,9 +12,13 @@
         <h1>Analisador de Número Real</h1>
         <?php 
             $numero = $_REQUEST["numero"];
+
+            
             // $inteiro = intval($numero);
             $inteiro = (int) $numero;
             $resto = $numero - $inteiro;
+
+
             echo "<p>Analisando o número <strong>" . number_format($numero, 3, ",", ".") . "</strong> informado pelo usuário:</p>";
             echo "<ul>
                 <li>A parte inteira do número é <strong>" . number_format($inteiro, 0, ",", "."). "</strong>.</li>
